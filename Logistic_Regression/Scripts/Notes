@@ -1,0 +1,25 @@
+Implementing Logistic regression
+
+Parameters/Variables
+
+
+For this model I first need to have my feature vectors and output vector
+Each pair feature_vector x[i] and output y[i] is a training example. For all i from 1 to the length of the data set (number of examples).
+Given the dataset i need:
+    - X, where X is a matrix containing feature_vectors x[i] as columns.
+    - Y, where Y is a vector containing the outputs y[i].
+
+The linear function z = Wx + b will be applied by the sigmoid function.
+Given the function I need:
+    - Z, where Z is a vector containing the value z[i] for each example.
+    - W, where W is a vector containing parameters w[j]. The length of W is the same is the length of x, as there is a parameter w for every feature x[i] in the feature vector X. (Note: makes sense matrix x vector because I want the same parameters for all examples in the data set every epoch)
+    - b, where b is a scalar. Also a parameter
+    - A, where A is the sigmoid function applied to Z
+
+The derivatives for every parameter will be computed and for every z[i]. This will be done with backpropagation using a cost function, where the general derivatives have already been computed
+Given the backpropagation step i need:
+    - dZ, where dZ is a vector containing the every derivative of z in respect to the cost function for every example. Each element is from one example. (To make more clear)
+    - dW, where dW is a vector containing the mean of all derivatives for each parameter w in respect o the cost function for every example
+    To better understand dW, each element is the mean of the w[j]`s across all examples. Will have the same length as W.
+    - dB, where dB is a scalar representing the mean between the derivatives of parameter b for every example in the dataset
+
