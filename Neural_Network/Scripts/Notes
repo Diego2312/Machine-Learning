@@ -1,0 +1,25 @@
+Neural Network implementation
+
+Binary classification (L layers, (n[1],n[2],n[3]))
+
+Define Variables and Parameters to be Used
+
+Training examples:
+
+    - Matrix X, which contains for each columns the inputs of a training example. dimensions(n[0], m) where m is the number of training examples and we have 4 inputs
+    - Matrix Y, which contains for each columns the output of a training example. dimensions(1, m) we have have only one output for each training example
+
+
+Parameters --> Weights and bias:
+    - For each layer there will be a matrix W[l].
+      Matrix W[l] contains for each column the weights of each node of a layer for a single training example. dimensions (n[l], n[l-1]) where n[l] is the number of nodes in the current layer
+    NOTE: This matrix will be constantly training, every training iteration the weights update
+
+    - For each layer there will be a matrix b[l].
+      Matrix b[l] will contain for each column the bias of a node of a layer. dimensions (n[l], 1) will be broad casted by python when computing the mean throughout examples.
+    NOTE: These too, like with the weight matrix will change every iteration
+
+Functions to compute:
+
+    - Matrix Z[l], which contains for each column the function z = w[transposed] * a[l-1] + b for a node in the given layer. dimensions (n[l], m).
+    - Matrix A[l], which contains for each columns the activation function g(z). dimensions (n[l], m).
