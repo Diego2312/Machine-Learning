@@ -23,3 +23,4 @@ Functions to compute:
 
     - Matrix Z[l], which contains for each column the function z = w[transposed] * a[l-1] + b for a node in the given layer. dimensions (n[l], m).
     - Matrix A[l], which contains for each columns the activation function g(z). dimensions (n[l], m).
+    - Matrix dA[L], which contains as the derivative of the last computed function with respect to the lost function for each example. (n[L]=1, m)
